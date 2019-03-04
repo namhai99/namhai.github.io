@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var ListModulesFrontPanel = (List<Service.EF.tblModulesFrontPanel>)ViewBag.ListModulesFrontPanel;
+    var ListModulesFrontPanel_Category = (List<Service.EF.tblCateNews>)ViewBag.ListModulesFrontPanel_Category;
+    String itemUrl = null;
+}
+@foreach (var item in ListModulesFrontPanel)
+{
+    if (item.ModulesFrontPanel_Panel == "Left" && item.ModulesFrontPanel_Parent == 0 && item.ModulesFrontPanel_Url=="BlockCategory.cshtml")
+    {
+        <div class="widget-2 widget">
+            <h3>@item.ModulesFrontPanel_Title</h3>
+            <div class="block-content">
+                <div class="article-list">
+                    <ul>
+                        @foreach (var item2 in ListModulesFrontPanel_Category.Take(item.ModulesFrontPanel_Record))
+                        {
+                            if (item2.GroupCate == Convert.ToInt32(item.ModulesFrontPanel_Value))
+                            {
+                                if (item2.IsUrl == true)
+                                {
+                                    itemUrl = "/News/NewsIndex?GroupCate=" + item2.GroupCate;
+                                }
+                                else
+                                {
+                                    itemUrl = item2.Url;
+                                }
+                                <li>
+                                    <a href="@itemUrl"><b>@item2.CateNewsName</b></a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+}

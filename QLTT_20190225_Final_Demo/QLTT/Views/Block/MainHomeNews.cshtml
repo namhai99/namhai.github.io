@@ -1,0 +1,178 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var ListModulesFrontPanel = (List<Service.EF.tblModulesFrontPanel>)ViewBag.ListModulesFrontPanel;
+    var lstNews = (List<Service.EF.FrontPanel_News>)ViewBag.lstNews;
+}
+<!-- ARTICLES V1 WIDGET -->
+<section class="widget articles-v1">
+    <header class="clearfix">
+        <h4>XÂY DỰNG ĐẢNG</h4>
+        <a href="#" class="control"><i class="fa fa-plus"></i></a>
+    </header>
+    <div class="article-medium">
+        <div class="article-medium">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="frame">
+                        <a class="image" href="#">
+                            <figure class="image-holder">
+                                <img src="http://dangcongsan.vn/DATA/0/2019/01/bac_vuong_3-11_56_58_260.jpg" alt="Tiếp tục thúc đẩy, nâng cao hiệu quả công tác đối ngoại của Đảng">
+                            </figure>
+                            <div class="image-light"></div>
+                            <span class="dashicons dashicons-format-gallery"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h4><a href="#">Tiếp tục thúc đẩy, nâng cao hiệu quả công tác đối ngoại của Đảng</a></h4>
+                    <p class="post-meta">
+                        <a href="#"><span class="fa fa-clock-o"></span> Nov 11, 2018</a> &nbsp;
+                        <a href="#"><span class="fa fa-folder"></span> Weather</a> &nbsp;
+                        <a href="#"><span class="fa fa-comments"></span> 5</a> &nbsp;
+                        <a href="#"><span class="fa fa-eye"></span> 16,589</a>
+                    </p>
+                    <p>(ĐCSVN) – Đồng chí Trần Quốc Vượng nhấn mạnh các trọng tâm công tác của đối ngoại Đảng và của Ban Đối ngoại Trung ương năm 2019: Tiếp tục thúc đẩy, đưa các quan hệ đối ngoại của Đảng vào chiều sâu, hiệu quả thực chất, chuẩn bị và tổ chức tốt các hoạt động đối ngoại lớn của lãnh đạo Đảng...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="article-medium">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="frame">
+                    <a class="image" href="#">
+                        <figure class="image-holder">
+                            <img src="http://dangcongsan.vn/DATA/0/2019/01/vna_potal_hoi_nghi_can_bo_chinh_tri_toan_quan_trien_khai_nhiem_vu_cong_tac_dang_cong_tac_chinh_tri_nam_2019_stand__2_-14_53_46_822.jpg" alt="Toàn quân tiếp tục thực hiện tốt các khâu đột phá">
+                        </figure>
+                        <div class="image-light"></div>
+                        <span class="dashicons dashicons-format-chat"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <h4><a href="#">Toàn quân tiếp tục thực hiện tốt các khâu đột phá</a></h4>
+                <p class="post-meta">
+                    <a href="#"><span class="fa fa-clock-o"></span> Dec 1, 2018</a> &nbsp;
+                    <a href="#"><span class="fa fa-folder"></span> Tin tức</a> &nbsp;
+                    <a href="#"><span class="fa fa-comments"></span> 65</a> &nbsp;
+                    <a href="#"><span class="fa fa-eye"></span> 87,956</a>
+                </p>
+                <p>Thượng tướng Lương Cường nhấn mạnh: Toàn quân phải nắm chắc tình hình, tập trung mọi nỗ lực xây dựng Quân đội vững mạnh; trong đó, hoạt động quân đội tiếp tục thực hiện tốt các khâu đột phá như: Tổ chức lực lượng, sẵn sàng chiến đấu...</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="article-medium">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="frame">
+                    <a class="image" href="#">
+                        <figure class="image-holder">
+                            <img src="http://dangcongsan.vn/DATA/0/2019/01/bac_vuong_3-11_56_58_260.jpg" alt="Tiếp tục thúc đẩy, nâng cao hiệu quả công tác đối ngoại của Đảng">
+                        </figure>
+                        <div class="image-light"></div>
+                        <span class="dashicons dashicons-format-gallery"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <h4><a href="#">Tiếp tục thúc đẩy, nâng cao hiệu quả công tác đối ngoại của Đảng</a></h4>
+                <p class="post-meta">
+                    <a href="#"><span class="fa fa-clock-o"></span> Nov 11, 2018</a> &nbsp;
+                    <a href="#"><span class="fa fa-folder"></span> Weather</a> &nbsp;
+                    <a href="#"><span class="fa fa-comments"></span> 5</a> &nbsp;
+                    <a href="#"><span class="fa fa-eye"></span> 16,589</a>
+                </p>
+                <p>(ĐCSVN) – Đồng chí Trần Quốc Vượng nhấn mạnh các trọng tâm công tác của đối ngoại Đảng và của Ban Đối ngoại Trung ương năm 2019: Tiếp tục thúc đẩy, đưa các quan hệ đối ngoại của Đảng vào chiều sâu, hiệu quả thực chất, chuẩn bị và tổ chức tốt các hoạt động đối ngoại lớn của lãnh đạo Đảng...</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+@foreach (var item in ListModulesFrontPanel)
+{
+    if (item.ModulesFrontPanel_Panel == "Main" && (item.ModulesFrontPanel_Url == "MainHomeNews.cshtml" || item.ModulesFrontPanel_Url == "MainHomeNews.ascx") && item.ModulesFrontPanel_Url != "MainHomeSlider.cshtml")
+    {
+        <!-- ARTICLES V2 WIDGET -->
+        <section class="widget articles-v2">
+            <header class="clearfix">
+                <h4>@item.ModulesFrontPanel_Title</h4>
+                <a href="/News/NewsIndex?GroupCate=@item.ModulesFrontPanel_Value" class="control"><i class="fa fa-plus"></i></a>
+            </header>
+
+            <div class="content row">
+                @foreach (var itemNews in lstNews)
+                {
+                    if (itemNews.GroupCate.ToString() == item.ModulesFrontPanel_Value.ToString())
+                    {
+                        if (itemNews.rn == 1)
+                        {
+                            //Tin hot
+                            <div class="col-sm-6 article-medium">
+                                <div class="frame">
+                                    <a class="image" href="#">
+                                        <figure class="image-holder">
+                                            <img src="@itemNews.ImageThumb" alt="@itemNews.Title">
+                                        </figure>
+                                        <div class="image-light"></div>
+                                        <span class="dashicons dashicons-format-quote"></span>
+                                    </a>
+                                </div>
+
+                                <h4><a href="#">@itemNews.Title</a></h4>
+                                <p class="post-meta">
+                                    <a href="#"><span class="fa fa-clock-o"></span> @itemNews.ApprovalDate</a> &nbsp;
+                                    <a href="#"><span class="fa fa-comments"></span> @itemNews.CommentTotal</a> &nbsp;
+                                    <a href="#"><span class="fa fa-eye"></span> 654 lượt xem</a>
+                                </p>
+
+                                <p>
+                                    @Html.Raw(itemNews.ShortDescribe)&hellip;
+                                </p>
+                                <hr>
+                            </div>
+                        }
+                    }
+                }
+
+                <div class="paragraph-row">
+                    @foreach (var itemNews in lstNews)
+                    {
+                        if (itemNews.GroupCate.ToString() == item.ModulesFrontPanel_Value.ToString())
+                        {
+                            if (itemNews.rn != 1)
+                            {
+                                <div class="col-sm-6 article-tiny">
+                                    <a href="#" class="image">
+                                        <figure class="image-holder">
+                                            <img src="@itemNews.ImageThumb" alt="@itemNews.Title">
+                                        </figure>
+                                        <div class="image-light"></div>
+                                        <span class="dashicons dashicons-format-link"></span>
+                                    </a>
+
+                                    <h5><a href="#">@itemNews.Title</a></h5>
+                                    <p class="post-meta">
+                                        <a href="#"><span class="fa fa-clock-o"></span> @itemNews.ApprovalDate</a> &nbsp;
+                                        <a href="#"><span class="fa fa-comments"></span> @itemNews.CommentTotal</a> &nbsp;
+                                        <a href="#"><span class="fa fa-eye"></span> 9,948</a>
+                                    </p>
+                                    <hr>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div><!--.content-->
+        </section><!--.widget-->
+    }
+}
+

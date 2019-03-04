@@ -1,0 +1,66 @@
+﻿@*@model List<Service.EF.tblCateNewsGroup>*@
+@{
+    Layout = null;
+}
+@{
+    var ListCateNewsGroup = (List<Service.EF.tblCateNewsGroup>)ViewBag.ListCateNewsGroup;
+    var ListCateNews = (List<Service.EF.tblCateNews>)ViewBag.ListCateNews;
+    string itemUrl = null;
+    string itemUrl2 = null;
+}
+<div class="collapse navbar-collapse" id="main-nav-collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <li class="active"><a href="#"><i class="fa fa-home"></i></a></li>
+        @foreach (var item in ListCateNewsGroup)
+        {
+            if (item.Url != null)
+            {
+                itemUrl = "/News/NewsIndex?GroupCate=" + item.GroupCate;
+            }
+            else
+            {
+                itemUrl = item.Url;
+            }
+            if (item.IsView == true)
+            {
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" style="text-transform:uppercase;" href="@itemUrl" title="@item.Description">@item.CateNewsGroupName<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        @foreach (var item2 in ListCateNews)
+                        {
+                            if (item2.GroupCate == item.GroupCate && item2.ParentNewsID == 0)
+                            {
+                                if (item2.Url != null)
+                                {
+                                    itemUrl2 = "/News/NewsCategory?CateNewsID=" + item2.CateNewsID;
+                                }
+                                else
+                                {
+                                    itemUrl2 = item2.Url;
+                                }
+                                <li class="dropdown">
+                                    <a href="@itemUrl2" class="dropdown-toggle" style="text-transform:uppercase;" data-toggle="dropdown" title="@item.">
+                                        @item2.CateNewsName
+                                    </a>
+                                    <ul class="">
+                                        @foreach (var item3 in ListCateNews)
+                                        {
+                                            if (item3.ParentNewsID == item2.CateNewsID && item3.ParentNewsID != 0)
+                                            {
+                                                <li><a href="@itemUrl2" style="text-transform:uppercase;">@item3.CateNewsName</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                            }
+                        }
+                    </ul>
+                </li>
+            }
+        }
+    </ul>
+</div>
+
+
+

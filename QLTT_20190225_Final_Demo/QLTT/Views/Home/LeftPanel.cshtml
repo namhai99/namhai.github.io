@@ -1,0 +1,267 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var ListModulesFrontPanel = (List<Service.EF.tblModulesFrontPanel>)ViewBag.ListModulesFrontPanel;
+    var ListOfficial = (List<Service.EF.tblOfficial>)ViewBag.ListOfficial;
+    var ListBrand = (List<Service.EF.tblBrand>)ViewBag.ListBrand;
+
+
+    //----------Left Panel----------//
+    var lstBlockLeft = (List<Service.EF.tblModulesFrontPanel>)ViewBag.BlockLeft;
+    //var lst_CateNewsGetAll = (List<Service.EF.tblCateNews>)ViewBag._CateNewsGetAll;
+    var lstBlockNews = (List<Service.EF.FrontPanel_News>)ViewBag.BlockNews;
+    var lstBrand = (List<Service.EF.tblBrand>)ViewBag.lstBrand;
+    var lstLink = (List<Service.EF.tblMenuLinks>)ViewBag.lstLink;
+    var lstImg = (List<Service.EF.tblAlbums>)ViewBag.lstImg;
+    var lstVideo = (List<Service.EF.tblVideo>)ViewBag.lstVideo;
+}
+<aside class="col-md-3">
+    <section class="row">
+        @if (lstBlockLeft != null && lstBlockLeft.Count() > 0)
+        {
+            foreach (var item in lstBlockLeft)
+            {
+                if (item.ModulesFrontPanel_Parent == 0)
+                {
+                    switch (item.ModulesFrontPanel_Url)
+                    {
+                        case "BlockCategory.ascx":
+                            <!-- ACCORDION -->
+                            <section class="col-sm-6 col-md-12 widget">
+                                <!--Widget header-->
+                                <header class="clearfix"><h4>@item.ModulesFrontPanel_Title</h4></header>
+                                <!--Widget content-->
+                                <div class="tab-content">
+                                    <!-- Categories-->
+                                    <div class="tab-pane active fade in" id="categories">
+                                        <ul class="categories">
+                                            @foreach (var itemChild1 in lstBlockLeft)
+                                            {
+                                                if (item.ModulesFrontPanel_ID == itemChild1.ModulesFrontPanel_Parent && itemChild1.ModulesFrontPanel_Parent != 0)
+                                                {
+                                                    <li><a href="@itemChild1.ModulesFrontPanel_Url"><i class="fa fa-angle-right"></i> @itemChild1.ModulesFrontPanel_Name</a></li>
+                                                }
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                                @*<ul class="accordion">
+                                    @foreach (var itemChild1 in lstBlockLeft)
+                                    {
+                                        if (item.ModulesFrontPanel_ID == itemChild1.ModulesFrontPanel_Parent && itemChild1.ModulesFrontPanel_Parent != 0)
+                                        {
+                                            <li class="header">
+                                                <i class="fa fa-plus"></i>
+                                                <a href="@itemChild1.ModulesFrontPanel_Url">
+                                                    @itemChild1.ModulesFrontPanel_Name
+                                                    <ul>
+                                                        @foreach (var itemChild2 in lstBlockLeft)
+                                                        {
+                                                            if (itemChild1.ModulesFrontPanel_ID == itemChild2.ModulesFrontPanel_Parent && itemChild2.ModulesFrontPanel_Parent != 0)
+                                                            {
+
+                                                                <li class="header">
+                                                                    <a href="@itemChild2.ModulesFrontPanel_Url">
+                                                                        @itemChild2.ModulesFrontPanel_Name
+                                                                    </a>
+                                                                </li>
+                                                            }
+                                                        }
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                        }
+                                    }
+                                </ul>*@
+                            </section>
+                            <!-- ACCORDION -->
+                            break;
+                        case "BlockNews.ascx":
+                            <!-- TABS WIDGET -->
+                            <section class="col-sm-6 col-md-12 widget">
+                                <!-- Tab menus -->
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#popular-aside" data-toggle="tab">@item.ModulesFrontPanel_Title</a></li>
+                                </ul>
+
+                                <!-- Tab contents -->
+                                <div class="tab-content">
+                                    <!--Popular-->
+                                    <div class="tab-pane active fade in" id="popular-aside">
+                                        @foreach (var item2 in lstBlockNews)
+                                        {
+                                            if (item.ModulesFrontPanel_ID == item2.ModulesFrontPanel_ID)
+                                            {
+                                                <div class="article-tiny">
+                                                    <a href="/news/newsindex?groupcate=@item2.GroupCate" class="image">
+                                                        <figure class="image-holder">
+                                                            <img src="@item2.ImageThumb" alt="@item2.Title">
+                                                        </figure>
+                                                        <div class="image-light"></div>
+                                                        <span class="dashicons dashicons-format-gallery"></span>
+                                                    </a>
+                                                    <h5><a href="/news/newsindex?groupcate=@item2.GroupCate">@item2.Title</a></h5>
+                                                    <p class="post-meta">
+                                                        <a href="#"><span class="fa fa-clock-o"></span> @item2.ApprovalDate</a> &nbsp;
+                                                        <a href="#"><span class="fa fa-folder"></span> Thời sự</a>
+                                                    </p>
+                                                </div>
+                                                <hr>
+                                            }
+                                        }
+
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- TABS WIDGET -->
+                            break;
+                        case "BlockVideo.ascx":
+                            <!-- VIMEO WIDGET -->
+                            <section class="col-sm-6 col-md-12 widget no-mobile">
+                                <header class="clearfix">
+                                    <h4>@item.ModulesFrontPanel_Title</h4>
+
+                                    <a href="#carousel-small" class="control" data-slide="next">
+                                        <i class="fa fa-chevron-right"></i>
+                                    </a>
+                                    <a href="#carousel-small" class="control" data-slide="prev">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                </header>
+
+                                <div id="carousel-small" class="carousel slide carousel-small frame" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        @foreach (var itemVideo in lstVideo)
+                                        {
+                                            <a class="item"
+                                               href="@itemVideo.VideoUrl"
+                                               title="@itemVideo.VideoName"
+                                               data-lightbox-gallery="gallery-small">
+                                                <div class="item-inner">
+                                                    <div data-src="@itemVideo.Image" data-alt="@itemVideo.VideoName"></div>
+                                                    <div class="image-light"></div>
+                                                    <div class="caption">
+                                                        <h5>@itemVideo.VideoName</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        }
+                                    </div><!--.carousel-inner-->
+                                </div><!--.carousel-->
+                            </section>
+                            <!-- VIMEO WIDGET -->
+                            break;
+                        case "BlockImage.ascx":
+                            <!--IMAGE WIDGET-->
+                            <section class="col-sm-6 col-md-12 widget no-mobile">
+                                <header class="clearfix">
+                                    <h4>@item.ModulesFrontPanel_Title</h4>
+
+                                    <a href="#carousel-small" class="control" data-slide="next">
+                                        <i class="fa fa-chevron-right"></i>
+                                    </a>
+                                    <a href="#carousel-small" class="control" data-slide="prev">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                </header>
+                                <div id="carousel-small" class="carousel slide carousel-small frame" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        @foreach (var itemImg in lstImg)
+                                        {
+                                            <a class="item"
+                                               href="#"
+                                               title="@itemImg.Title"
+                                               data-lightbox-gallery="gallery-small">
+                                                <div class="item-inner">
+                                                    <div data-src="@itemImg.ImageThumb" data-alt="@itemImg.Title"></div>
+                                                    <div class="image-light"></div>
+                                                    <div class="caption">
+                                                        <h5>@itemImg.Title</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        }
+                                    </div><!--.carousel-inner-->
+                                </div><!--.carousel-->
+                            </section>
+                            <!--IMAGE WIDGET-->
+                            break;
+                        case "BlockWebImageLink.ascx":
+                            <!-- Brand WIDGET -->
+                            <section class="col-sm-6 col-md-12 widget no-mobile">
+                                <header class="clearfix">
+                                    <h4>@item.ModulesFrontPanel_Title</h4>
+                                </header>
+
+                                <div id="carousel-small" class="carousel slide carousel-small frame" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        @foreach (var itemBrand in lstBrand)
+                                        {
+                                            <a class="item active"
+                                               href="@itemBrand.BrandUrl"
+                                               title="@itemBrand.BrandName"
+                                               data-lightbox-gallery="gallery-small">
+                                                <div class="item-inner">
+                                                    <div data-src="@itemBrand.Image" data-alt="@itemBrand.BrandName"></div>
+                                                    <div class="image-light"></div>
+                                                    <div class="caption">
+                                                        <h5>@itemBrand.BrandName</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        }
+                                    </div><!--.carousel-inner-->
+                                </div><!--.carousel-->
+                            </section>
+                            <!-- Brand WIDGET -->
+                            break;
+                        case "BlockWebLink.ascx":
+                            <!-- BlockWebLink WIDGET -->
+                            <section class="widget col-sm-6 col-md-12 no-mobile">
+                                <header class="clearfix"><h4>@item.ModulesFrontPanel_Title</h4></header>
+                                <div class="frame thick">
+                                    <select onchange="location = this.value;" class="form-control">
+                                        @foreach (var itemLink in lstLink)
+                                        {
+                                            <option value="@itemLink.MenuLinksUrl">
+                                                @itemLink.MenuLinksName
+                                            </option>
+                                        }
+                                    </select>
+                                </div>
+                            </section>
+                            <!-- BlockWebLink WIDGET -->
+                            break;
+                        default:
+                            //code here
+                            break;
+                    }
+                }
+
+            }
+        }
+        <!-- TABS: CATEGORIES AND TAGS -->
+        <section class="col-sm-6 col-md-12 widget">
+            <!-- Widget header: tab menu -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#categories" data-toggle="tab">Danh mục</a></li>
+            </ul><!--.nav-tabs-->
+            <!-- Tab contents -->
+            <div class="tab-content">
+                <!-- Categories-->
+                <div class="tab-pane active fade in" id="categories">
+                    <ul class="categories">
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Thời sự <span class="post-counts">54,435,464</span></a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Chính trị <span class="post-counts">34,355,346</span></a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Xã hội <span class="post-counts">3,234,356</span></a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Kinh tế <span class="post-counts">874,355</span></a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Giải trí <span class="post-counts">11,234,987</span></a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Công nghệ <span class="post-counts">9,937,397</span></a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Đời sống <span class="post-counts">345,385</span></a></li>
+                    </ul>
+                </div>
+            </div><!--.tab-content-->
+        </section>
+    </section>
+</aside>
