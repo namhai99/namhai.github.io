@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+    var ListModulesFrontPanel = (List<Service.EF.tblModulesFrontPanel>)ViewBag.ListModulesFrontPanel;
+    var ListModulesFrontPanel_Brand = (List<Service.EF.tblBrand>)ViewBag.ListModulesFrontPanel_Brand;
+}
+
+@foreach (var item in ListModulesFrontPanel)
+{
+    if ((item.ModulesFrontPanel_Panel == "Left" || item.ModulesFrontPanel_Panel == "Right") && item.ModulesFrontPanel_Url == "BlockWebLink.cshtml")
+    {
+        <div class="widget-2 widget">
+            <h3 style="text-align:center;">@item.ModulesFrontPanel_Title</h3>
+            <div>
+                <ul>
+                    @foreach (var itemBrand in ListModulesFrontPanel_Brand.Take(item.ModulesFrontPanel_Record))
+                    {
+                        <li>
+                            <a href="@itemBrand.BrandUrl" title="@itemBrand.BrandName"><img src="@itemBrand.Image" class="img-responsive" style="width:100%"></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+}
+

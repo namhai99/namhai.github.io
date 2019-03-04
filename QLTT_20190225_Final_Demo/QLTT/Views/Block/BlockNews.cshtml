@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var ListModulesFrontPanel = (List<Service.EF.tblModulesFrontPanel>)ViewBag.ListModulesFrontPanel;
+    var ListModulesFrontPanel_News = (List<Service.EF.tblNewsGroup>)ViewBag.ListModulesFrontPanel_News;
+}
+@foreach (var item in ListModulesFrontPanel)
+{
+    if ((item.ModulesFrontPanel_Panel == "Left" || item.ModulesFrontPanel_Panel == "Right") && item.ModulesFrontPanel_Url == "BlockNews.cshtml")
+    {
+        <div class="widget-2 widget">
+            <h3 text-align:center">@item.ModulesFrontPanel_Title</h3>
+            <div class="block-content">
+                <div class="widget-articles">
+                    <ul>
+                        @foreach (var item2 in ListModulesFrontPanel_News.Take(item.ModulesFrontPanel_Record))
+                        {
+                            if (item2.GroupCate == Convert.ToInt32(item.ModulesFrontPanel_Value))
+                            {
+                                <li>
+                                    <div class="comment-photo">
+                                        <span class="hover-effect delegate">
+                                            <span class="cover" style="font-size:20px;"><i></i><img src="@item2.ImageThumb" alt="@item2.Title"></span>
+                                        </span>
+                                    </div>
+                                    <div class="comment-content">
+                                        <h3><a href="/News/NewsIndex?GroupCate=@item2.GroupCate">@item2.Title</a></h3>
+                                        <p>@Html.Raw(item2.ShortDescribe)</p>
+                                        <span class="meta-date">
+                                            @item2.PostDate
+                                        </span>
+                                        <span class="meta">
+                                            <a href="/News/NewsDetail?NewsGroupID=@item2.NewsGroupID">Xem chi tiết...</a>
+                                        </span>
+                                    </div>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,103 @@
+﻿@{
+    var ListNews = (List<Service.EF.tblNewsGroup>)ViewBag.ListNews;
+}
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "NewsIndex";    // EM CHƯA BIẾT CÁCH LẤY RA CÁI NÀY
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-block main right">
+    <div class="block" id="myTable">
+        <div class="block-title">
+            <a href="/" class="right">Về trang chủ</a>
+            <h2>@ViewBag.Title</h2>
+        </div>
+        @*@{ Html.RenderAction("NewsIndexContent", "News", new { page = 1 });}*@
+        <div class="block-content">
+            @foreach (var itemNews in ListNews.Take(25))
+            {
+                <div class="article-big post-167 post type-post status-publish format-standard has-post-thumbnail hentry category-business category-europe category-travel tag-delectus-pericula-id-sea tag-duo-illum tag-veritus-ullamcorper">
+                    <div class="article-photo">
+                        <a href="#" class="hover-effect delegate">
+                            <span class="cover" style="font-size:23.333333333333332px;"><i></i><img class="image-border" src="~/Asset/wp-content/uploads/2013/11/photodune-6145888-mountain-landscape-m-210x140_c.jpg" alt="@itemNews.Title"></span>
+                        </a>
+                    </div>
+
+                    <div class="article-content">
+                        <h2>
+                            <a href="/News/NewsDetail?NewsGroupID=@itemNews.NewsGroupID">@itemNews.Title</a>
+                            <span class="meta">
+                            </span>
+                        </h2>
+                        <span class="meta">
+                        </span>
+                        <p>@Html.Raw(itemNews.ShortDescribe)</p>
+                        <span class="meta">
+                            <a href="/News/NewsDetail?NewsGroupID=@itemNews.NewsGroupID" class="more">Xem Chi Tiết<span class="icon-text">▸</span></a>
+                        </span>
+                    </div>
+                </div>
+            }
+
+            <!--Phân trang-->
+            @*@if (ViewBag.TotalPage > 1)
+            {
+                var pageDisplay = (int)ViewBag.MaxPage;
+                int totalPage = (int)ViewBag.TotalPage;
+                int currentPage = ((int)ViewBag.Page);
+
+                // Create numeric links
+                var startPageIndex = Math.Max(1, currentPage - pageDisplay / 2);
+                var endPageIndex = Math.Min(totalPage, currentPage + pageDisplay / 2);
+
+                var link = "News/NewsIndex?GroupCate=" + ViewBag.ListNews.Title;
+                <nav>
+                    <ul class="pagination">
+                        @if (currentPage > ViewBag.First)
+                {
+                            <li><a href="@link?page=@ViewBag.First" title="Trang đầu" class="first"><i class="fa fa-angle-double-left"><<</i></a></li>
+                            <li>
+                                <a href="@link?page=@ViewBag.Prev" title="Trang trước" class="prev"><i class="fa fa-angle-left"><</i></a>
+                            </li>
+
+                        }
+                        @for (int i = startPageIndex; i <= endPageIndex; i++)
+                        {
+                            if (currentPage == i)
+                            {
+
+                                <li> <a href="@link?page=@i" class="active" title="Trang @i">@i</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="@link?page=@i" title="Trang @i" class="pos">@i</a></li>
+                            }
+                        }
+                        @if (currentPage < totalPage)
+                        {
+                            <li><a href="@link?page=@ViewBag.Next" class="next" title="Trang sau"><i class="fa fa-angle-right">></i></a></li>
+                            <li> <a href="@link?page=@ViewBag.Last" class="last" title="Trang cuối"><i class="fa fa-angle-double-right">>></i></a></li>
+                        }
+
+                    </ul>
+                </nav>
+
+            }
+            else
+            {
+                <span>Không có bản ghi nào</span>
+            }*@
+
+            <div class="pagination">
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers" href="page/2/index.html">2</a>
+                <a class="next page-numbers" href="page/2/index.html">Next Page<span class="icon-text right">▸</span></a>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- END .content-block -->
+</div>
+

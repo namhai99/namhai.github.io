@@ -1,0 +1,53 @@
+﻿@{
+    var ListNews = (List<Service.EF.tblNewsGroup>)ViewBag.ListNews;
+}
+@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@foreach (var itemNews in ListNews)
+{
+    <div class="content-block main right">
+        <div class="block">
+            <div class="block-content post-163 post type-post status-publish format-standard has-post-thumbnail hentry category-entertainment category-middle-east tag-duo-illum tag-mea-fugit-appareat tag-molestiae">
+                <div class="article-title">
+                    <h1>@itemNews.Title</h1>
+                    <div class="author">
+                        <div class="a-content">
+                            <span>Bởi <b>@itemNews.CreatedUserName</b></span>
+                            <span class="meta">
+                                @itemNews.PostDate
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    <span class="hover-effect delegate">
+                        <span class="cover" style="font-size:44.166666666666664px;"><i></i><img class="image-border" src="~/@itemNews.ImageLarge"></span>
+                    </span>
+                </p>
+                <div class="shortcode-content">
+                    <div class="paragraph-row">
+                        <div class="column12">
+                            <p>@Html.Raw(itemNews.FullDescribe)</p>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="article-title">
+                        <div class="author">
+                            <div class="a-content">
+                                <span>Bởi <b>@itemNews.CreatedUserName</b></span>
+                                <span class="meta">
+                                    @itemNews.PostDate
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END .content-block -->
+    </div>
+}
+
+

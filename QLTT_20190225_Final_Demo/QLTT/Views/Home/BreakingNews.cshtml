@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var ListBreakingNews = (List<Service.EF.tblNewsGroup>)ViewBag.ListBreakingNews;
+}
+
+<section class="breaking-news">
+    <header>
+        <h4>Hôm nay: @DateTime.Now</h4>
+        <i class="triangle"></i>
+    </header>
+    <div class="content">
+        <ul>
+            @foreach (var itemBreakingNews in ListBreakingNews.Take(5))
+            {
+                <li><a href="/News/NewsDetail?NewsGroupID=@itemBreakingNews.NewsGroupID"><i class="fa fa-angle-double-right"></i> @itemBreakingNews.Title</a></li>
+            }
+        </ul>
+    </div>
+</section>

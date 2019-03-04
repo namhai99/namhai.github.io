@@ -1,0 +1,92 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var ListModulesFrontPanel = (List<Service.EF.tblModulesFrontPanel>)ViewBag.ListModulesFrontPanel;
+    var ListModulesFrontPanel_Slider = (List<Service.EF.tblNewsGroup>)ViewBag.ListModulesFrontPanel_Slider;
+}
+
+<!-- CAROUSEL  -->
+<section class="widget no-mobile">
+    <div class="frame thick">
+        <div id="carousel-medium" class="carousel caption-slide slide carousel-medium" data-ride="carousel">
+            <!-- Carousel contents -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="item-inner">
+                        <div data-src="https://4.bp.blogspot.com/-z1esCFaT_nU/WpN8ItUK3EI/AAAAAAAACWI/RDtyDzlWuKAzsRmndtL7KVFKLh9GPhkKgCLcBGAs/s1600/2.jpg" data-alt="Thành phố Bến Tre: Sơ kết thực hiện Đề án số 01 của Tỉnh uỷ về cán bộ trẻ, cán bộ nữ và Nghị quyết 02 của Tỉnh ủy"></div>
+                        <div class="carousel-caption">
+                            <div><a href="#"><h3>Thành phố Bến Tre: Sơ kết thực hiện Đề án số 01 của Tỉnh uỷ về cán bộ trẻ, cán bộ nữ và Nghị quyết 02 của Tỉnh ủy</h3></a></div>
+                            <div class="hidden-xs">
+                                <p>
+                                    Thành phố Bến Tre: Sơ kết thực hiện Đề án số 01 của Tỉnh uỷ về cán bộ trẻ, cán bộ nữ và Nghị quyết 02 của Tỉnh ủy
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-inner">
+                        <div data-src="https://thegioitranhsondau.com/upload/images/con-duong-lang-1.jpg" data-alt="Giồng Trôm: Khai giảng lớp bồi dưỡng cập nhật kiến thức cho đội ngũ cán bộ, đảng viên đối tượng 5 năm 2018 "></div>
+                        <div class="carousel-caption">
+                            <div><a href="#"><h3>Giồng Trôm: Khai giảng lớp bồi dưỡng cập nhật kiến thức cho đội ngũ cán bộ, đảng viên đối tượng 5 năm 2018 </h3></a></div>
+                            <div class="hidden-xs">
+                                <p>
+                                    Giồng Trôm: Khai giảng lớp bồi dưỡng cập nhật kiến thức cho đội ngũ cán bộ, đảng viên đối tượng 5 năm 2018
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-light"></div>
+
+            <!-- Carousel Controls -->
+            <a class="left carousel-control" href="#carousel-medium" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+            <a class="right carousel-control" href="#carousel-medium" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+        </div>
+    </div>
+    <img src="~/Content/img/shadow.png" class="shadow" alt="shadow">
+</section>
+
+<!-- CAROUSEL  -->
+<section class="widget no-mobile">
+    <div class="frame thick">
+        <div id="carousel-medium" class="carousel caption-slide slide carousel-medium" data-ride="carousel">
+            <!-- Carousel contents -->
+            <div class="carousel-inner">
+                @foreach (var item in ListModulesFrontPanel)
+                {
+                    if (item.ModulesFrontPanel_Panel == "Main" && item.ModulesFrontPanel_Url == "MainHomeSlider.cshtml")
+                    {
+                        foreach (var itemSlider in ListModulesFrontPanel_Slider)
+                        {
+                            if (itemSlider.GroupCate == Convert.ToInt32(item.ModulesFrontPanel_Value))
+                            {
+                                <div class="item">
+                                    <div class="item-inner">
+                                        <div data-src="@itemSlider.ImageLarge" data-alt="@itemSlider.Title"></div>
+                                        <div class="carousel-caption">
+                                            <div><a href="/News/NewsDetail?NewsGroupID=@itemSlider.NewsGroupID"><h3>@itemSlider.Title</h3></a></div>
+                                            <div class="hidden-xs">
+                                                <p>
+                                                    @itemSlider.ShortDescribe
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                }
+            </div>
+            <div class="image-light"></div>
+            <!-- Carousel Controls -->
+            <a class="left carousel-control" href="#carousel-medium" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+            <a class="right carousel-control" href="#carousel-medium" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+        </div>
+    </div>
+    <img src="~/Content/img/shadow.png" class="shadow" alt="shadow">
+</section>

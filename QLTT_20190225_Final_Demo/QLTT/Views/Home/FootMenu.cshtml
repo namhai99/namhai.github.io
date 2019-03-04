@@ -1,0 +1,165 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var ListCateNewsGroup = (List<Service.EF.tblCateNewsGroup>)ViewBag.ListCateNewsGroup;
+    string itemUrl = null;
+}
+<footer>
+    <!-- MAIN FOOTER -->
+    <div id="footer-main">
+        <div class="container">
+            <div class="row">
+                <!-- Flickr Feed -->
+                <section class="col-md-3 col-sm-6">
+                    <div class="title"><h4>Flickr Feed</h4></div>
+                    <ul id="flickr-feed-footer" class="flickr-feed clearfix">
+                        <li><i class="fa fa-spinner fa-spin"></i> Please wait...</li>
+                        <li>
+                            <script type="text/template">
+                        <li>
+                            <a href="http://wartahtmldemo.friskamax.com/%7B%7Blink%7D%7D" title="{{title}}" class="dark" target="_blank">
+                                <img src="http://wartahtmldemo.friskamax.com/%7B%7Bthumbnail%7D%7D" alt="{{title}}">
+                                <div class="layer"></div>
+                            </a>
+                        </li>
+                        </script>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- POPULAR TAGS -->
+                <section class="col-md-3 col-sm-6">
+                    <div class="title"><h4>Popular Tags</h4></div>
+
+                    <ul class="tags clearfix">
+                        <li><a href="#">morbi id</a></li>
+                        <li><a href="#">vulputate est</a></li>
+                        <li><a href="#">tiam quis</a></li>
+                        <li><a href="#">lectus</a></li>
+                        <li><a href="#">nunc</a></li>
+                        <li><a href="#">phasellus pharetra</a></li>
+                        <li><a href="#">velit quam</a></li>
+                        <li><a href="#">id laoreet</a></li>
+                        <li><a href="#">elit</a></li>
+                        <li><a href="#">porta</a></li>
+                        <li><a href="#">rhoncus</a></li>
+                        <li><a href="#">unc sit</a></li>
+                        <li><a href="#">amet nunc</a></li>
+                        <li><a href="#">velit tincidunt</a></li>
+                        <li><a href="#">nec fermentum</a></li>
+                        <li><a href="#">cursus</a></li>
+                        <li><a href="#">metus</a></li>
+                        <li><a href="#">estibulum</a></li>
+                        <li><a href="#">eleifend at ligula</a></li>
+                        <li><a href="#">vel aliquam</a></li>
+                        <li><a href="#">id velit</a></li>
+                        <li><a href="#">usce</a></li>
+                        <li><a href="#">hasellus</a></li>
+                        <li><a href="#">semper</a></li>
+                        <li><a href="#">dui ut</a></li>
+                    </ul>
+                </section>
+
+                <!-- RECENT bình luận -->
+                <section class="col-md-3 col-sm-6">
+                    <!--Title-->
+                    <div class="title"><h4>Recent bình luận</h4></div>
+
+                    <ul class="recent-comments clearfix">
+                        <li>
+                            <div class="avatar">
+                                <a href="#" class="dark">
+                                    <img src="~/Content/img/content/DSC00441-avatar.jpg" alt="Siska">
+                                    <div class="layer"></div>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="comment-content">
+                                    <a href="#">Aliquam sollicitudin massa eu augue hendrerit</a>
+                                </div>
+                                <div class="comment-meta">
+                                    <a href="#" class="author"><i class="fa fa-user"></i> Siska</a>&nbsp;
+                                    <a href="#"><i class="fa fa-clock-o"></i> Sep 16, 2018</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar">
+                                <a href="#" class="dark">
+                                    <img src="~/Content/img/content/DSC02979-avatar.jpg" alt="Fahri">
+                                    <div class="layer"></div>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="comment-content">
+                                    <a href="#">Fusce viverra ligula elit aliquam vel turpis ut</a>
+                                </div>
+                                <div class="comment-meta">
+                                    <a href="#" class="author"><i class="fa fa-user"></i> Fahri</a>&nbsp;
+                                    <a href="#"><i class="fa fa-clock-o"></i> Aug 31, 2018</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar">
+                                <a href="#" class="dark">
+                                    <img src="~/Content/img/content/snapshot_20120929_133548-E2-avatar.jpg" alt="Rahma">
+                                    <div class="layer"></div>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="comment-content">
+                                    <a href="#">Eget facilisis erat aliquet tempus mi ligula consequat</a>
+                                </div>
+                                <div class="comment-meta">
+                                    <a href="#" class="author"><i class="fa fa-user"></i> Rahma</a>&nbsp;
+                                    <a href="#"><i class="fa fa-clock-o"></i> Aug 24, 2018</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Contact Form -->
+                <section class="col-md-3 col-sm-6">
+                    <div class="title"><h4>Send Us a Message</h4></div>
+                    <form class="contact-form">
+                        <p class="input-group">
+                            <i class="fa fa-user"></i>
+                            <input type="text" placeholder="Full name *">
+                        </p>
+                        <p class="input-group">
+                            <i class="fa fa-envelope"></i>
+                            <input type="text" placeholder="Email address *">
+                        </p>
+                        <p class="input-group">
+                            <i class="fa fa-link"></i>
+                            <input type="text" placeholder="Website">
+                        </p>
+                        <p>
+                            <textarea placeholder="Message *" rows="6"></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Send" class="btn btn-dark">
+                        </p>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div><!--#footer-main-->
+    <!-- FOOTER BOTTOM -->
+    <div id="footer-bottom">
+        <div class="container">
+            <p>Copyright &copy; @DateTime.Now.Year - <strong> by E-Tek</strong></p>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div><!--#footer-bottom-->
+</footer>

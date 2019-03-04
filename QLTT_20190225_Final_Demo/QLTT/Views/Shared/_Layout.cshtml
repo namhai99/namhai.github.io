@@ -1,0 +1,755 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html id="home-version-2" class="csstransforms nivo-lightbox-notouch flat-style no-image-light">
+<head>
+    <title>Trang chủ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://www.bentre.dcs.vn/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="~/Content/css/style.min.css" rel="stylesheet">
+    <link href="~/Content/css/custom.css" rel="stylesheet">
+    <link href="~/Content/customizer/css/customizer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <a name="top" id="top"></a> 
+    <header>
+        <!-- PAGE TITLE -->
+        <div id="title">
+            <div class="container">
+                <div class="title-container">
+                    <img src="/Content/img/banner.gif" style="height:150px; width:1270px;">
+                </div>
+            </div>
+        </div><!-- #title -->
+        <!-- MAIN NAVBAR -->
+        <nav class="navbar navbar-default" id="main-nav" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-nav-collapse">
+                    <ul class="nav navbar-nav navbar-left top-level-menu">
+                        <li class="active"><a href="/"><i class="fa fa-home"></i></a></li>
+                        <li>
+                            <a href="#">BCH ĐẢNG BỘ TỈNH <b class="caret"></b></a>
+                            <ul class="second-level-menu">
+                                <li>
+                                    <a href="#">Tổng quan Trà Vinh <b class="caret"></b></a>
+                                    <ul class="third-level-menu">
+                                        <li><a href="#">Nhiệm kỳ 2015-2020 (thay đổi)</a></li>
+                                        <li><a href="#">Nhiệm kỳ 2015-2020</a></li>
+                                        <li><a href="#">Nhiệm kỳ 2020-2025</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/Demo/BlogList" style="text-transform:uppercase;">Danh sách BCH</a></li>
+                                <li><a href="/Demo/BlogList" style="text-transform:uppercase;">BCH , BTV,TTTU</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/Demo/BlogList" class="dropdown-toggle" style="text-transform:uppercase;" data-toggle="dropdown">MÔ HÌNH ĐIỂN HÌNH <b class="caret"></b></a>
+                            <ul class="second-level-menu">
+                                <li><a href="/Demo/BlogDetail">Mô hình 1</a></li>
+                                <li><a href="/Demo/BlogDetail">Mô hình 2</a></li>
+                                <li><a href="/Demo/BlogDetail">Mô hình 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Demo/BlogList/" class="dropdown-toggle" style="text-transform:uppercase;" data-toggle="dropdown">TIN TỨC SỰ KIỆN <b class="caret"></b></a>
+                            <ul class="second-level-menu">
+                                <li><a href="/Demo/BlogDetail">Tin nổi bật</a></li>
+
+                                <li><a href="/Demo/BlogList">Hoạt động cơ sở</a></li>
+
+                                <li><a href="/Demo/BlogList">Mặt trận đoàn thể</a></li>
+
+                                <li><a href="/Demo/BlogList">Mặt trận - Đoàn thể - Hội</a></li>
+
+                                <li><a href="/Demo/BlogList">Quốc phòng - An ninh</a></li>
+
+                                <li><a href="/Demo/BlogList">Kinh tế</a></li>
+
+                                <li><a href="/Demo/BlogList">Văn hóa - Xã hội</a></li>
+
+                                <li><a href="/Demo/BlogList">Xây dựng chính quyền</a></li>
+
+                                <li><a href="/Demo/BlogList">Xây dựng Đảng</a></li>
+
+
+                            </ul>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Demo/BlogList" class="dropdown-toggle" style="text-transform:uppercase;" data-toggle="dropdown">THÔNG TIN XÂY DỰNG ĐẢNG <b class="caret"></b></a>
+                            <ul class="second-level-menu">
+                                <li><a href="/Demo/BlogDetail">Thông tin Lãnh đạo</a></li>
+
+                                <li><a href="/Demo/BlogDetail">Sổ tay báo cáo viên</a></li>
+
+                                <li><a href="/Demo/BlogDetail">Đảng Bộ Tỉnh</a></li>
+
+                                <li><a href="/Demo/BlogList">Đảng bộ Cơ sở</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Demo/BlogList" class="dropdown-toggle" style="text-transform:uppercase;">GIẢI TRÍ</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Demo/BlogList" class="dropdown-toggle" style="text-transform:uppercase;">VIDEO</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Demo/BlogList" class="dropdown-toggle" style="text-transform:uppercase;">HÌNH ẢNH</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Demo/BlogList" class="dropdown-toggle" style="text-transform:uppercase;">VĂN BẢN</a>
+                        </li>
+                        <li>
+                            <a href="/Demo/BlogList" class="dropdown-toggle" style="text-transform:uppercase;">GÓP Ý</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><!-- #main-nav -->
+        <div class="container">
+            <!-- BREAKING NEWS -->
+            <div class="breaking-news col-md-9 col-xs-12">
+                <header>
+                    <h4>Hôm nay: @DateTime.Now</h4>
+                    <i class="triangle"></i>
+                </header>
+                <div class="content">
+                    <ul>
+                        <li><a href="/Demo/BlogList"><i class="fa fa-angle-double-right"></i> Báo cáo tháng 01/2018</a></li>
+                        <li><a href="/Demo/BlogList"><i class="fa fa-angle-double-right"></i> Báo cáo tháng 03/2018</a></li>
+                        <li><a href="/Demo/BlogList"><i class="fa fa-angle-double-right"></i> Báo cáo tháng 05/2018</a></li>
+                        <li><a href="/Demo/BlogList"><i class="fa fa-angle-double-right"></i> Báo cáo tháng 07/2018</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-xs-12" style="padding:0px;">
+                <form class="navbar-form navbar-right" role="search" style="margin: 5px 0px 5px 0px;">
+                    <label class="sr-only" for="top_search_form">Search for</label>
+                    <input id="top_search_form" type="search" placeholder="Tìm kiếm" style="margin-bottom:0px; width: 258px;">
+                    <button type="submit">
+                        <span class="fa fa-search"></span>
+                        <span class="sr-only">Search/submit</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <!-- SIDEBAR -->
+                <aside class="col-md-3">
+                    <div class="row">
+                        <!-- ACCORDION -->
+                        <section class="col-sm-6 col-md-12 widget" style="padding-right: 10px !important;">
+                            <!--Widget header-->
+                            <header class="clearfix"><h4>BCH ĐẢNG BỘ TỈNH</h4></header>
+                            <!--Widget content-->
+                            <div class="block-border">
+                                <ul class="categories">
+                                    <li><a href="/Demo/BlogDetail"><i class="fa fa-angle-right"></i> Tổng quan Trà Vinh</a></li>
+                                    <li>
+                                        <a href="/Demo/BlogList"><i class="fa fa-angle-right"></i> Danh sách BCH</a>
+                                        <ul>
+                                            <li><a href="/Demo/BlogDetail"> Nhiệm kỳ 2015-2020 (thay đổi)</a></li>
+                                            <li><a href="/Demo/BlogDetail"> Nhiệm kỳ 2015-2020</a></li>
+                                            <li><a href="/Demo/BlogDetail"> Nhiệm kỳ 2010-2015</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/Demo/BlogList"><i class="fa fa-angle-right"></i> BCH , BTV,TTTU</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!-- ACCORDION -->
+                        <section class="col-sm-6 col-md-12 widget" style="padding-right:10px;">
+                            <!--Widget header-->
+                            <header class="clearfix"><h4>VĂN BẢN</h4></header>
+                            <!--Widget content-->
+                            <div class="block-border">
+                                <ul class="categories">
+                                    <li><a href="/Demo/BlogList"><i class="fa fa-angle-right"></i> Văn bản chỉ đạo điều hành</a></li>
+                                    <li><a href="/Demo/BlogList"><i class="fa fa-angle-right"></i> Văn kiện Đảng bộ tỉnh</a></li>
+                                    <li><a href="/Demo/BlogList"><i class="fa fa-angle-right"></i> Văn kiện-Tư liệu</a></li>
+                                    <li><a href="/Demo/BlogList"><i class="fa fa-angle-right"></i> Văn bản Trung ương</a></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="col-sm-6 col-md-12 widget" style="padding-right:10px;">
+                            <!-- Tab menus -->
+                            <header class="clearfix"><h4>TIN TỨC MỚI</h4></header>
+
+                            <!-- Tab contents -->
+                            <div class="tab-content">
+                                <!--Popular-->
+                                <div class="tab-pane active fade in" id="ThoiSu">
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2019/2/28/02320190228075633670671-0228155732.jpg" alt="Hiệu quả từ quỹ hỗ trợ phụ nữ phát triển kinh tế tại huyện Giồng Trôm">
+                                            </figure>
+                                            <span class="dashicons dashicons-format-gallery"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Hiệu quả từ quỹ hỗ trợ phụ nữ phát triển kinh tế tại huyện Giồng Trôm</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Tuyên truyền</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2019/2/28/anngaitrungbatricongboquyetdinhcongnhantrungtamxaladothiloaivanh220190228075509993990-0228151449.JPG" alt="An Ngãi Trung (Ba Tri) công bố Quyết định công nhận trung tâm xã là đô thị loại V">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-audio"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">An Ngãi Trung (Ba Tri) công bố Quyết định công nhận trung tâm xã là đô thị loại V</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Xã hội</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2019/2/28/khenthuongcaccanhantapthetaihoinghi201920190228013225804800-0228135049.JPG" alt="Ba Tri tổng kết công tác phòng cháy chữa cháy năm 2018 và triển khai nhiệm vụ công tác năm 2019">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-links"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Ba Tri tổng kết công tác phòng cháy chữa cháy năm 2018 và triển khai nhiệm vụ công tác năm 2019</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Tuyên truyền</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2019/2/27/dong-chi-lam-nhu-quynh-phat-bieu-0227094118.jpg" alt="Định hướng viết tin – bài tháng 10.2018 Trang thông tin điện tử Tỉnh ủy Trà Vinh">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-audio"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Định hướng viết tin – bài tháng 10.2018 Trang thông tin điện tử Tỉnh ủy Trà Vinh</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Tuyên truyền</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2018/9/10/20180910071049-0910071200.jpg" alt="Trà Vinh tổ chức Lễ phát động năm thanh niên tình nguyện 2019">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-audio"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Trà Vinh tổ chức Lễ phát động năm thanh niên tình nguyện 2019</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Xã hội</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- ADS WIDGET -->
+                        <section class="widget col-sm-6 col-md-12 no-mobile" style="padding-right:10px; margin-bottom:0px;">
+                            <header class="clearfix"><h4>LIÊN KẾT</h4></header>
+                            <div class="frame thick">
+                                <a href="/Demo/BlogList"><div data-src="http://mahaninstitute.com/wp-content/uploads/2018/07/best-google-adwords-courses-760x428-360x203.jpg" data-alt="Liên Kết"></div></a>
+                                <a href="/Demo/BlogList"><div data-src="http://www.bentre.dcs.vn/Uploads/Thumbs/2017/12/4/qc2-1204181852.jpg" data-alt="Liên Kết"></div></a>
+                                <a href="/Demo/BlogList"><div data-src="http://www.bentre.dcs.vn/Uploads/Thumbs/2017/12/4/qc3-1204182018.jpg" data-alt="Liên Kết"></div></a>
+                                <a href="/Demo/BlogList"><div data-src="http://www.bentre.dcs.vn/Uploads/Thumbs/2017/12/4/qc5-1204182053.png" data-alt="Liên Kết"></div></a>
+                            </div>
+                        </section>
+                        <!-- ADS Link Combobox -->
+                        <section class="col-sm-6 col-md-12 widget" style="padding-right:10px;">
+                            <!--Widget header-->
+                            <header class="clearfix"><h4>LIÊN KẾT LINK</h4></header>
+                            <!--Widget content-->
+                            <div class="block-border">
+                                <select onchange="location = this.value;" class="form-control">
+                                    <option value="http://www.bentre.gov.vn/Pages/Homepage.aspx">
+                                        UBND Tỉnh Trà Vinh
+                                    </option>
+                                    <option value="http://dangcongsan.vn/">
+                                        Đảng Cộng sản Việt Nam
+                                    </option>
+                                    <option value="http://hdnd.bentre.gov.vn//">
+                                        Hội đồng nhân dân tỉnh Trà Vinh
+                                    </option>
+                                </select>
+                            </div>
+                        </section>
+                        <!-- TABS: CATEGORIES AND TAGS -->
+                        <section class="col-sm-6 col-md-12 widget" style="padding-right:10px;">
+                            <!-- Widget header: tab menu -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#thongke" data-toggle="tab">THỐNG KÊ TRUY CẬP</a></li>
+                            </ul><!--.nav-tabs-->
+                            <!-- Tab contents -->
+                            <div class="tab-content block-border">
+                                <!-- Categories-->
+                                <div class="tab-pane active fade in" id="thongke">
+                                    <ul class="categories">
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Đang online <span class="post-counts">14</span></a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Hôm nay <span class="post-counts">46</span></a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Tháng này <span class="post-counts">4,356</span></a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Năm 2019 <span class="post-counts">34,355</span></a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i> Tổng số <span class="post-counts">234,987</span></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--.tab-content-->
+                        </section>
+                    </div>
+                </aside>
+                <!-- MAIN CONTENT -->
+                <main id="main-content" class="col-md-6 main-body-style" style="padding-left:10px !important;padding-right:10px;">
+                    @RenderBody()
+                </main>
+                <!--#main-content-->
+                <!-- SIDEBAR -->
+                <aside class="col-md-3">
+                    <div class="row">
+                        <!-- BLOCK NEWS WIDGET -->
+                        <section class="col-sm-6 col-md-12 widget" style="padding-left:10px;">
+                            <!-- Tab menus -->
+                            <header class="clearfix"><h4>ĐỊNH HƯỚNG TUYÊN TRUYỀN</h4></header>
+
+                            <!-- Tab contents -->
+                            <div class="tab-content">
+                                <!--Popular-->
+                                <div class="tab-pane active fade in" id="ThoiSu">
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="~/Content/img/content/unsplash_528cba6de78e5_1-tiny.jpg" alt="Định hướng nội dung viết tin, bài tháng 8, 9/2018">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-gallery"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Định hướng nội dung viết tin, bài tháng 2, 3/2019</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Tuyên truyền</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="~/Content/img/content/unsplash_5261cd0183e57_1-tiny.jpg" alt="Định hướng viết tin bài tháng 01.2019 Trang thông tin điện tử Tỉnh ủy Trà Vinh">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-audio"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Định hướng viết tin bài tháng 01.2019 Trang thông tin điện tử Tỉnh ủy Trà Vinh</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Tuyên truyền</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="~/Content/img/content/11452469094_9d17db34ba_o-tiny.jpg" alt="Định hướng viết tin bài tháng 12.2018 Trang thông tin điện tử Tỉnh ủy Trà Vinh">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-links"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Định hướng viết tin bài tháng 12.2018 Trang thông tin điện tử Tỉnh ủy Trà Vinh</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Tuyên truyền</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- SCROLL WIDGET -->
+                        <section class="col-sm-6 col-md-12 widget" style="padding-left:10px !important;">
+                            <!-- Tab menus -->
+                            <header class="clearfix"><h4>VĂN BẢN MỚI</h4></header>
+
+                            <!-- Tab contents -->
+                            <div class="frame" style="margin-bottom:0;">
+                                <marquee direction="up" height="200" scrolldelay="100" scrollamount="5" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+                                    <div class="article-list">
+                                        <ul>
+                                            <li class="li-scroll">
+                                                <div class="comment-content">
+                                                    <h5><a href="/Demo/BlogDetail">Thông tri về nhiệm vụ năm học 2018-2019</a></h5>
+                                                    <span class="meta-date">
+                                                        Thứ 5, 28/02/2019
+                                                    </span>
+                                                    <span class="meta">
+                                                        <a href="/Demo/BlogDetail">Xem chi tiết...</a>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="li-scroll">
+                                                <div class="comment-content">
+                                                    <h5><a href="/Demo/BlogDetail">V/v theo dõi, ngăn chặn mã độc GandCrab</a></h5>
+                                                    <span class="meta-date">
+                                                        Thứ 5, 28/02/2019
+                                                    </span>
+                                                    <span class="meta">
+                                                        <a href="/Demo/BlogDetail">Xem chi tiết...</a>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="li-scroll">
+                                                <div class="comment-content">
+                                                    <h5><a href="/Demo/BlogDetail">Chương trình hành động thực hiện Nghị quyết số 23-NQ/TW của Bộ Chính trị về định hướng xây dựng chính sách phát triển công nghiệp quốc gia đến năm 2030, tầm nhìn đến năm 2045 trên địa bàn tỉnh Trà Vinh</a></h5>
+                                                    <span class="meta-date">
+                                                        Thứ 5, 28/02/2019
+                                                    </span>
+                                                    <span class="meta">
+                                                        <a href="/Demo/BlogDetail">Xem chi tiết...</a>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="li-scroll">
+                                                <div class="comment-content">
+                                                    <h5><a href="/Demo/BlogDetail">Chương trình hành động thực hiện Nghị quyết số 26-NQ/TW ngày 19/5/2018 Hội nghị lần thứ 7 Ban Chấp hành Trung ương khóa XII</a></h5>
+                                                    <span class="meta-date">
+                                                        Thứ 5, 28/02/2019
+                                                    </span>
+                                                    <span class="meta">
+                                                        <a href="/Demo/BlogDetail">Xem chi tiết...</a>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="li-scroll">
+                                                <div class="comment-content">
+                                                    <h5><a href="/News/NewsIndex?GroupCate=274">Chương trình hành động thực hiện Nghị quyết số 28-NQ/TW của Ban Chấp hành Trung ương Đảng khóa XII</a></h5>
+                                                    <span class="meta-date">
+                                                        Thứ 5, 28/02/2019
+                                                    </span>
+                                                    <span class="meta">
+                                                        <a href="/Demo/BlogDetail">Xem chi tiết...</a>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </marquee>
+                            </div>
+                        </section>
+                        <!-- ADS WIDGET -->
+                        <section class="widget col-sm-6 col-md-12 no-mobile" style="padding-left:10px;">
+                            <div class="frame thick" style="margin-bottom:0;">
+                                <a><div data-src="http://www.bentre.dcs.vn/ckfinder/userfiles/images/Story.jpg" data-alt="Quảng cáo"></div></a>
+                            </div>
+                        </section>
+
+
+                        <section class="col-sm-6 col-md-12 widget" style="padding-left:10px;">
+                            <!-- Tab menus -->
+                            <header class="clearfix"><h4>PHÁP LUẬT</h4></header>
+
+                            <!-- Tab contents -->
+                            <div class="tab-content">
+                                <!--Popular-->
+                                <div class="tab-pane active fade in" id="ThoiSu">
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2018/11/22/anhvegiongtromtiepcongdanvagiaiquyetkhieunaitocao201811210431074740-1122080534.jpg" alt="Năm 2018 - Giồng Trôm thực hiện tốt công tác tiếp công dân, giải quyết khiếu nại tố cáo">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-gallery"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Năm 2018 - Giồng Trôm thực hiện tốt công tác tiếp công dân, giải quyết khiếu nại tố cáo</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Pháp luật</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2018/11/1/anhphientoaxetxulephonghai20181101100148590590-1101134946.JPG" alt="Xét xử vụ án “cố ý làm trái các quy định của nhà nước về quản lý kinh tế gây hậu quả nghiêm trọng”">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-audio"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Xét xử vụ án “cố ý làm trái các quy định của nhà nước về quản lý kinh tế gây hậu quả nghiêm trọng”</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Pháp luật</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2018/10/9/kiemtragiaoducphapluatogiongtrom20181008064316821820-1009081545.jpg" alt="Kiểm tra công tác phổ biến, giáo dục pháp luật, hòa giải cơ sở, chuẩn tiếp cận pháp luật tại...">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-audio"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Kiểm tra công tác phổ biến, giáo dục pháp luật, hòa giải cơ sở, chuẩn tiếp cận pháp luật tại...</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Pháp luật</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="col-sm-6 col-md-12 widget" style="padding-left:10px;">
+                            <!-- Tab menus -->
+                            <header class="clearfix"><h4>QUỐC PHÒNG - AN NINH</h4></header>
+
+                            <!-- Tab contents -->
+                            <div class="tab-content">
+                                <!--Popular-->
+                                <div class="tab-pane active fade in" id="ThoiSu">
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2019/2/28/khenthuongcaccanhantapthetaihoinghi201920190228013225804800-0228135049.JPG" alt="Tập trung làm tốt công tác tư tưởng trong kiện toàn, sắp xếp bộ máy">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-links"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Tập trung làm tốt công tác tư tưởng trong kiện toàn, sắp xếp bộ máy</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Quốc phòng</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2019/2/26/traokyniemchuong20190225102411685693-0226072805.JPG" alt="Ba Tri - Đồn Biên phòng Ham Luông họp mặt 60 năm ngày truyền thống Bộ đội biên phòng, 30 năm ngày...">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-links"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Ba Tri - Đồn Biên phòng Ham Luông họp mặt 60 năm ngày truyền thống Bộ đội biên phòng, 30 năm ngày...</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Quốc phòng</a>
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="article-tiny">
+                                        <a href="/Demo/BlogDetail" class="image">
+                                            <figure class="image-holder">
+                                                <img src="http://www.bentre.dcs.vn/Uploads/Originals/2019/2/21/bithuhuyenuythanhphutanghoachotanbinh2019201902210247463130-0221153433.jpg" alt="Thạnh Phú tổ chức lễ giao nhận quân năm 2019">
+                                            </figure>
+
+                                            <span class="dashicons dashicons-format-links"></span>
+                                        </a>
+                                        <h5><a href="/Demo/BlogDetail">Thạnh Phú tổ chức lễ giao nhận quân năm 2019</a></h5>
+                                        <p class="post-meta">
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-clock-o"></span> 28/02/2019</a> &nbsp;
+                                            <a href="/Demo/BlogDetail"><span class="fa fa-folder"></span> Quốc phòng</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+
+                        <!-- CAROUSEL SMALL WIDGET -->
+                        <section class="col-sm-6 col-md-12 widget no-mobile" style="padding-left:10px;">
+                            <header class="clearfix">
+                                <h4>
+                                    THƯ VIỆN ẢNH
+                                    <a href="#carousel-small" class="control" data-slide="next">
+                                        <i class="fa fa-chevron-right"></i>
+                                    </a>
+                                    <a href="#carousel-small" class="control" data-slide="prev">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                </h4>
+                            </header>
+
+                            <div id="carousel-small" class="carousel slide carousel-small frame" data-ride="carousel" style="margin-bottom:0;">
+                                <div class="carousel-inner">
+                                    <a class="item active"
+                                       href="http://www.bacgiang.gov.vn/lib/ckfinder/images/20(35).jpg"
+                                       title="Trà Vinh: Đại hội điểm Đảng bộ xã Hiệp Thạnh thành công"
+                                       data-lightbox-gallery="gallery-small">
+                                        <div class="item-inner">
+                                            <div data-src="http://www.bacgiang.gov.vn/lib/ckfinder/images/20(35).jpg" data-alt="Trà Vinh: Đại hội điểm Đảng bộ xã Hiệp Thạnh thành công"></div>
+
+                                            <div class="caption">
+                                                <h5>Trà Vinh: Đại hội điểm Đảng bộ xã Hiệp Thạnh thành công</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="item"
+                                       href="http://image.sggp.org.vn/w560/Uploaded/2019/nkdkswkqoc/original/2010/10/images350716_anh--dai-hoi-dang-tra-vinh.jpg"
+                                       title="Khai mạc Đại hội đại biểu Đảng bộ tỉnh Trà Vinh lần thứ IX"
+                                       data-lightbox-gallery="gallery-small">
+                                        <div class="item-inner">
+                                            <div data-src="http://image.sggp.org.vn/w560/Uploaded/2019/nkdkswkqoc/original/2010/10/images350716_anh--dai-hoi-dang-tra-vinh.jpg" data-alt="Khai mạc Đại hội đại biểu Đảng bộ tỉnh Trà Vinh lần thứ IX"></div>
+
+                                            <div class="caption">
+                                                <h5>Khai mạc Đại hội đại biểu Đảng bộ tỉnh Trà Vinh lần thứ IX</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="item"
+                                       href="http://www.bacgiang.gov.vn/lib/ckfinder/images/20(35).jpg"
+                                       title="Trà Vinh phấn đấu trở thành tỉnh phát triển khá ở ĐBSCL"
+                                       data-lightbox-gallery="gallery-small">
+                                        <div class="item-inner">
+                                            <div data-src="http://www.bacgiang.gov.vn/lib/ckfinder/images/20(35).jpg" data-alt="Trà Vinh phấn đấu trở thành tỉnh phát triển khá ở ĐBSCL"></div>
+
+                                            <div class="caption">
+                                                <h5>Trà Vinh phấn đấu trở thành tỉnh phát triển khá ở ĐBSCL</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="item"
+                                       href="https://travinh.toaan.gov.vn/webcenter/ShowProperty?nodeId=/UCMServer/TAND023272"
+                                       title="Tỉnh ủy Trà Vinh tổ chức hội nghị Ban chấp hành Đảng bộ tỉnh lần thứ 14 "
+                                       data-lightbox-gallery="gallery-small">
+                                        <div class="item-inner">
+                                            <div data-src="https://travinh.toaan.gov.vn/webcenter/ShowProperty?nodeId=/UCMServer/TAND023272" data-alt="Tỉnh ủy Trà Vinh tổ chức hội nghị Ban chấp hành Đảng bộ tỉnh lần thứ 14 "></div>
+
+                                            <div class="caption">
+                                                <h5>Tỉnh ủy Trà Vinh tổ chức hội nghị Ban chấp hành Đảng bộ tỉnh lần thứ 14 </h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div><!--.carousel-inner-->
+                            </div><!--.carousel-->
+                        </section>
+                        <!-- VIMEO WIDGET -->
+                        <section class="col-sm-6 col-md-12 widget no-mobile" style="padding-left:10px;">
+                            <header class="clearfix"><h4>THƯ VIỆN VIDEO</h4></header>
+                            <iframe width="361" height="170" src="https://www.youtube.com/embed/cSMtdgFrU80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </section>
+
+                    </div>
+                </aside>
+            </div><!--.row-->
+        </div>
+    </div><!--#content-->
+
+    <footer>
+        <!-- FOOTER BOTTOM -->
+        <div id="footer-bottom">
+            <div class="container">
+                <ul>
+                    <li><a href="#">BCH ĐẢNG BỘ TỈNH</a></li>
+                    <li><a href="#">Mô Hình - Điển Hình</a></li>
+                    <li><a href="#">Tin Tức - Sự Kiện</a></li>
+                    <li><a href="#">Video</a></li>
+                    <li><a href="#">Hình Ảnh</a></li>
+                    <li><a href="#">Văn Bản</a></li>
+                    <li><a href="#">Góp Ý</a></li>
+                </ul>
+            </div>
+        </div><!--#footer-bottom-->
+        <!--Main Footer-->
+        <div id="footer-main">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Form -->
+                    <section class="col-md-12 col-sm-6" style="margin-bottom:0px;">
+                        <div class="text-center">
+                            <h3>BAN CHẤP HÀNH ĐẢNG BỘ TỈNH TRÀ VINH</h3>
+                            <h5>Chịu trách nhiệm: Văn phòng Tỉnh ủy</h5>
+                            <h5>Địa chỉ: Số 52/2A Lê Lợi, P1, Thành phố Trà Vinh, Trà Vinh</h5>
+                            <h5>Email: vptu@travinh.gov.vn</h5>
+                            <h5>ĐT: 074.3852679</h5>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Scroll to top-->
+    <div onclick="topFunction()" class="scroll-to-top" id="myBtn" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+    <!-- jQuery  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!--Modernizr-->
+    <script src="~/Content/js/modernizr.min.js"></script>
+    <!-- start-smoth-scrolling -->
+    <script src="~/Content/js/SmoothScroll.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/move-top.js"></script>
+    <script type="text/javascript" src="~/Content/js/easing.js"></script>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            $('#myBtn').on('click', function (e) {
+                $("html, body").animate({ scrollTop: $("#top").offset().top }, 300);
+            });
+        }
+    </script>
+
+    <!-- Warta scripts -->
+    <script src="~/Content/js/script.min.js"></script>
+    <script src="~/Content/js/initialize.js"></script>
+    <script src="~/Content/customizer/js/customizer.js"></script>
+</body>
+</html>
+
